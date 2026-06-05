@@ -1,0 +1,4 @@
+import { ContactForm } from "@/components/Sections";
+import { site } from "@/lib/site";
+export const metadata = { title: "Contact Service HQ Inc." };
+export default function Page(){return <main><section className="bg-soft px-4 py-20"><div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-2"><div><h1 className="display text-5xl font-black text-navy">Contact Service HQ</h1><p className="mt-5 text-lg text-slate-600">Request HVAC or appliance repair service across South Florida.</p><div className="card mt-8"><p><strong>Contact:</strong> {site.contactName}</p><p className="mt-3"><strong>Phone:</strong> <a href={site.phoneHref}>{site.phone}</a></p><p className="mt-3"><strong>Email:</strong> <a href={site.emailHref}>{site.email}</a></p><p className="mt-3"><strong>Address:</strong> {site.address}</p></div></div><ContactForm/></div></section></main>}

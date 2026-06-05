@@ -1,0 +1,3 @@
+import { CTA, ContactForm } from "@/components/Sections";
+export const metadata = { title: "Heating Services in South Florida | Service HQ Inc." };
+export default function Page(){return <main><section className="bg-soft px-4 py-20"><div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-2"><div><h1 className="display text-5xl font-black text-navy">Heating Services</h1><p className="mt-6 text-lg leading-8 text-slate-700">Reliable heating system service and repair from a locally owned South Florida company.</p><ul className="mt-6 grid gap-3 text-slate-700"><li>✓ Heating system service</li><li>✓ System diagnostics</li><li>✓ Professional repair support</li></ul></div><ContactForm/></div></section><CTA/></main>}
