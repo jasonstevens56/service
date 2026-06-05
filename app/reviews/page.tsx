@@ -1,4 +1,22 @@
-import { CTA } from "@/components/Sections";
-import { site } from "@/lib/site";
-export const metadata = { title: "Google Reviews | Service HQ Inc." };
-export default function Page(){return <main><section className="px-4 py-20"><div className="mx-auto max-w-4xl text-center"><h1 className="display text-5xl font-black text-navy">Service HQ Reviews</h1><p className="mt-5 text-lg text-slate-600">Read customer feedback on Google for Service HQ Inc.</p><div className="card mt-10"><div className="text-5xl text-action">★★★★★</div><p className="mt-4 text-slate-600">Customer review text is not included until real review content is supplied.</p><a className="btn-primary mt-6" href={site.reviewUrl} target="_blank">View Google Reviews</a></div></div></section><CTA/></main>}
+import { CTA } from "@/components/CTA";
+import { ReviewVisual } from "@/components/Visuals";
+
+export default function Page() {
+  return (
+    <>
+      <section className="bg-soft py-16">
+        <div className="container">
+          <p className="text-sm font-bold uppercase tracking-widest text-serviceBlue">Service HQ Inc.</p>
+          <h1 className="mt-3 text-4xl font-black text-navy md:text-5xl">Google Reviews</h1>
+          <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-700">Customer reviews are available through the provided Google Reviews link. Service HQ Inc. does not display invented review text or ratings.</p>
+        </div>
+      </section>
+      <section className="py-16 md:py-20">
+        <div className="container">
+          <ReviewVisual />
+        </div>
+      </section>
+      <CTA />
+    </>
+  );
+}

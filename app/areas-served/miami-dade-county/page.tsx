@@ -1,3 +1,22 @@
-import { CTA, ContactForm } from "@/components/Sections";
-export const metadata = { title: "HVAC & Appliance Repair in Miami Dade County | Service HQ Inc." };
-export default function Page(){return <main><section className="px-4 py-20"><div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-2"><div><h1 className="display text-5xl font-black text-navy">HVAC & Appliance Repair in Miami Dade County</h1><p className="mt-6 text-lg leading-8 text-slate-700">Service HQ provides air conditioning, heating, and appliance repair services in Miami Dade County.</p><ul className="mt-6 grid gap-3 text-slate-700"><li>✓ Air conditioning repair</li><li>✓ Heating services</li><li>✓ Appliance repair</li></ul></div><ContactForm/></div></section><CTA/></main>}
+import { CTA } from "@/components/CTA";
+import { CountyVisualCards } from "@/components/Visuals";
+
+export default function Page() {
+  return (
+    <>
+      <section className="bg-soft py-16">
+        <div className="container">
+          <p className="text-sm font-bold uppercase tracking-widest text-serviceBlue">Service HQ Inc.</p>
+          <h1 className="mt-3 text-4xl font-black text-navy md:text-5xl">HVAC & Appliance Repair in Miami-Dade County</h1>
+          <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-700">Service HQ Inc. provides HVAC, heating, and appliance repair services in Miami-Dade County.</p>
+        </div>
+      </section>
+      <section className="py-16">
+        <div className="container">
+          <CountyVisualCards />
+        </div>
+      </section>
+      <CTA />
+    </>
+  );
+}

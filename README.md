@@ -1,6 +1,6 @@
-# Service HQ Inc. Website
+# Service HQ Website
 
-Next.js starter website for Service HQ Inc. using only the supplied business information.
+A Next.js website for Service HQ Inc.
 
 ## Run locally
 
@@ -11,15 +11,6 @@ npm run dev
 
 Open http://localhost:3000
 
-## Built with
+## Important
 
-- Next.js
-- TypeScript
-- Tailwind CSS
-- Framer Motion dependency included for future animations
-
-## Notes
-
-- No fake license number, hours, emergency claims, warranties, financing, or specific appliance types were added.
-- Contact form UI is included but needs to be connected to email, CRM, or form backend.
-- Privacy and terms pages are starter placeholders and should be replaced with legal-approved copy.
+Do not commit `node_modules` or `.next`. They are ignored in `.gitignore`.

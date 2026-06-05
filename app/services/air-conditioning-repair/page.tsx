@@ -1,3 +1,26 @@
-import { CTA, ContactForm } from "@/components/Sections";
-export const metadata = { title: "Air Conditioning Repair in South Florida | Service HQ Inc." };
-export default function Page(){return <main><section className="bg-soft px-4 py-20"><div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-2"><div><h1 className="display text-5xl font-black text-navy">Air Conditioning Repair</h1><p className="mt-6 text-lg leading-8 text-slate-700">Professional air conditioning diagnostics and repair for homes across Broward, Palm Beach, and Miami-Dade Counties.</p><ul className="mt-6 grid gap-3 text-slate-700"><li>✓ AC system troubleshooting</li><li>✓ Cooling performance issues</li><li>✓ Repair-focused service</li></ul></div><ContactForm/></div></section><CTA/></main>}
+import { CTA } from "@/components/CTA";
+import { ServiceVisualCard } from "@/components/Visuals";
+
+export default function Page() {
+  return (
+    <>
+      <section className="bg-soft py-16">
+        <div className="container">
+          <p className="text-sm font-bold uppercase tracking-widest text-serviceBlue">Service HQ Inc.</p>
+          <h1 className="mt-3 text-4xl font-black text-navy md:text-5xl">Air Conditioning Repair</h1>
+          <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-700">Professional air conditioning diagnostics and repair service for South Florida homes. Service HQ helps customers address cooling issues with detail-focused service.</p>
+        </div>
+      </section>
+      <section className="py-16">
+        <div className="container max-w-3xl">
+          <ServiceVisualCard
+            service="ac"
+            href="/contact"
+            description="Professional air conditioning diagnostics and repair service for South Florida homes."
+          />
+        </div>
+      </section>
+      <CTA />
+    </>
+  );
+}

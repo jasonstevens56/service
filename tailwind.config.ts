@@ -9,13 +9,13 @@ const config: Config = {
         serviceBlue: "#1EA7FF",
         action: "#FF7A00",
         soft: "#F7F9FC",
-        ink: "#1F2937"
+        ink: "#1F2937",
       },
       boxShadow: {
-        card: "0 18px 50px rgba(15, 76, 129, 0.12)"
-      }
-    }
+        card: "0 18px 50px rgba(15, 76, 129, 0.12)",
+      },
+    },
   },
-  plugins: []
+  plugins: [],
 };
 export default config;

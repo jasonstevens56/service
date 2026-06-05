@@ -1,3 +1,32 @@
-import { CTA, ServiceCards } from "@/components/Sections";
-export const metadata = { title: "HVAC & Appliance Repair Services | Service HQ Inc." };
-export default function Page(){return <main><section className="px-4 py-20"><div className="mx-auto max-w-7xl"><h1 className="display text-5xl font-black text-navy">HVAC & Appliance Repair Services</h1><p className="mt-5 max-w-3xl text-lg text-slate-600">Service HQ provides air conditioning, heating, and appliance repair services across South Florida.</p><div className="mt-10"><ServiceCards/></div></div></section><CTA/></main>}
+import { CTA } from "@/components/CTA";
+import { ServiceVisualCard } from "@/components/Visuals";
+import { services } from "@/components/site-data";
+
+const serviceKeys = ["ac", "heat", "appliance"] as const;
+
+export default function Page() {
+  return (
+    <>
+      <section className="bg-soft py-16">
+        <div className="container">
+          <p className="text-sm font-bold uppercase tracking-widest text-serviceBlue">Service HQ Inc.</p>
+          <h1 className="mt-3 text-4xl font-black text-navy md:text-5xl">HVAC & Appliance Repair Services</h1>
+          <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-700">Service HQ Inc. provides air conditioning, heating, and appliance repair services across Broward, Palm Beach, and Miami-Dade Counties.</p>
+        </div>
+      </section>
+      <section className="py-16 md:py-20">
+        <div className="container grid gap-6 md:grid-cols-3">
+          {services.map((service, index) => (
+            <ServiceVisualCard
+              key={service.href}
+              service={serviceKeys[index] ?? "ac"}
+              href={service.href}
+              description={service.description}
+            />
+          ))}
+        </div>
+      </section>
+      <CTA />
+    </>
+  );
+}

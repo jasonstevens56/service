@@ -1,3 +1,26 @@
-import { CTA, ContactForm } from "@/components/Sections";
-export const metadata = { title: "Heating Services in South Florida | Service HQ Inc." };
-export default function Page(){return <main><section className="bg-soft px-4 py-20"><div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-2"><div><h1 className="display text-5xl font-black text-navy">Heating Services</h1><p className="mt-6 text-lg leading-8 text-slate-700">Reliable heating system service and repair from a locally owned South Florida company.</p><ul className="mt-6 grid gap-3 text-slate-700"><li>✓ Heating system service</li><li>✓ System diagnostics</li><li>✓ Professional repair support</li></ul></div><ContactForm/></div></section><CTA/></main>}
+import { CTA } from "@/components/CTA";
+import { ServiceVisualCard } from "@/components/Visuals";
+
+export default function Page() {
+  return (
+    <>
+      <section className="bg-soft py-16">
+        <div className="container">
+          <p className="text-sm font-bold uppercase tracking-widest text-serviceBlue">Service HQ Inc.</p>
+          <h1 className="mt-3 text-4xl font-black text-navy md:text-5xl">Heating Services</h1>
+          <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-700">Reliable heating service and repair for homes that need system diagnostics or repair support.</p>
+        </div>
+      </section>
+      <section className="py-16">
+        <div className="container max-w-3xl">
+          <ServiceVisualCard
+            service="heat"
+            href="/contact"
+            description="Reliable heating service and repair when your system needs attention."
+          />
+        </div>
+      </section>
+      <CTA />
+    </>
+  );
+}
